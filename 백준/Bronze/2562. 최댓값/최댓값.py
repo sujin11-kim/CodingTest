@@ -1,11 +1,8 @@
 max_num = 0
-count = 0
+arr = []
 
 for i in range(9):
-    n = int(input())
-    if max_num < n:
-        max_num = n
-        count = i+1
+    arr.append(int(input()))
 
-print(max_num)
-print(count)
+print(max(arr))
+print(arr.index(max(arr))+1)
