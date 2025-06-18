@@ -7,7 +7,7 @@ public class Main {
 		Stack<Character> stack = new Stack<>();
 		
 		for(char c: s.toCharArray()) {
-			if(c=='(' || c=='[') stack.add(c);
+			if(c=='(' || c=='[') stack.push(c);
 			else if(c==')') {
 				if(stack.isEmpty() || stack.pop()!='(') return "no";
 			} else if(c==']') {
@@ -25,9 +25,7 @@ public class Main {
 		while(true) {
 			String s = sc.nextLine();
 			if(s.equals(".")) break;
-			else {
-				System.out.println(T.solution(s));
-			}
+			else System.out.println(T.solution(s));
 		}
 		sc.close();
 	}
