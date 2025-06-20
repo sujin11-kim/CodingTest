@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Main {
@@ -7,14 +8,14 @@ public class Main {
 		String s = sc.next();
 		int r = 1;
 		int m = 1234567891;
-		int answer = 0;
+		long answer = 0;
 		
 		for(int i=0; i<l; i++) {
 			int a = s.charAt(i)-'a'+1;
-			answer += a*r;
-			r*=31;
+			answer = answer + (long) a*r % m;
+			r = (int)((long)r * 31 % m); 
 		}
-		answer%=m;
+		answer = (long) answer%m;
 		System.out.print(answer);
 		
 		sc.close();
