@@ -7,7 +7,7 @@ public class Main {
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 		
-		int[][] board = new int[n][m];
+		char[][] board = new char[n][m];
 		for(int i=0; i<n; i++) {
 			String s = sc.next();
 			for(int j=0; j<m; j++) {
